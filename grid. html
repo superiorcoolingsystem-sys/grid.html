@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website</title>
+
+    <style>
+        /* GLOBAL STYLE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f8f8;
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            background: #ff6b6b;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.7;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 60vh;
+            background: url("https://images.pexels.com/photos/2156/sky-earth-space-working.jpg") 
+                        center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 60px;
+            background: #283644;
+            color: white;
+            gap: 40px;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* -------------------------- */
+        /* RESPONSIVE DESIGN */
+        /* -------------------------- */
+
+        /* MOBILE VIEW */
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                padding: 30px;
+                text-align: left;
+            }
+        }
+
+        /* TABLET VIEW */
+        @media (min-width: 600px) and (max-width: 1024px) {
+
+            header {
+                padding: 15px 30px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .about {
+                grid-template-columns: 1fr 1fr;
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Site</h1>
+            <p>Discover amazing experiences</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="about-text">
+            <h2>About Our Company</h2>
+            <p>We are dedicated to providing exceptional service and innovative solutions to meet your needs.</p>
+            <p>Our team of experts works tirelessly to ensure customer satisfaction.</p>
+            <p>With years of experience in the industry, we've helped thousands of clients achieve their goals.</p>
+        </div>
+
+        <div class="about-img">
+            <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Office Image">
+        </div>
+    </section>
+
+</body>
+</html>
